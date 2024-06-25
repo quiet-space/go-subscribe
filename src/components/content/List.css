@@ -1,0 +1,80 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+  
+.Item {
+    width: 500px;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    .Title {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr 12fr 3fr;
+        row-gap: 3px;
+        align-items: center;
+
+        .OTT-Type { 
+            grid-row: inherit;
+            width: 30px;
+            height: 30px;
+            background-color: grey;
+    
+            .OTT-logo{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        .Party {
+            font-size: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+        }
+    
+        .User {
+            font-size: 16px;
+            color: grey;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+        }
+    }
+
+    .Content {
+        background: white;
+        color: black;
+        padding: 20px;
+        text-align: start;
+
+        .Desc {
+            font-size: 18px;
+        }
+
+        .Pay {
+            display: flex;
+            font-size: 20px;
+            justify-content: flex-end;
+            margin-top: 13px;
+        }
+    }
+
+    .Hidden {
+        display: none;
+    }
+}
