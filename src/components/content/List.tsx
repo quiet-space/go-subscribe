@@ -7,9 +7,13 @@ import axios from "axios";
 const List = () => {
     const [items, setItems] = useState([])
 
-    useEffect(() => {
+    function loadItems() {
         axios.get("http://localhost:8080/party")
         .then(({data}) => setItems(data))
+    }
+
+    useEffect(() => {
+        loadItems()
     }, [])
 
     const navigate = useNavigate();
@@ -21,7 +25,7 @@ const List = () => {
     return <div className="Container">
             <button onClick={clickWrite}>새로 작성하기</button>
         {
-            items.map(({type, sn, party, user, fee, desc, unit} : ItemProps) => 
+            items.map(({type, sn, party, user, fee, desc, password, unit} : ItemProps) => 
                 (
                     <Item key={sn} 
                           sn={sn}
@@ -31,6 +35,8 @@ const List = () => {
                           desc={desc}
                           fee={fee}
                           unit={unit}
+                          password={password}
+                          onLoadItems={loadItems}
                     ></Item>
                 )
             )
