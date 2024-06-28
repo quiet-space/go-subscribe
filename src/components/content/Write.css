@@ -1,0 +1,22 @@
+    .line {
+        border: 1px solid white;
+        padding: 10px;
+
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+        font-size: 16px;
+        
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    
+        .subject {
+            width: 140px;
+        }
+    
+        input {
+            width: 460px;
+        }
+    }

@@ -31,6 +31,9 @@
             width: 30px;
             height: 30px;
             background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
     
             .OTT-logo{
                 width: 30px;
